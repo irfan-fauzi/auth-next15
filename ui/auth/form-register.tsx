@@ -1,19 +1,18 @@
+import TextField from "@mui/material/TextField";
+import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
+
 const Formregister = () => {
   return (
-    <form action='' className='mt-3'>
-    
+    <form action=''>
       <div className=''>
-        <label htmlFor='name' className='block mb-1 text-gray-500'>
-          Name <span className='text-red-500'>*</span>
-        </label>
-        <input
+        <TextField
+          id='outlined-basic'
+          label='Name'
+          variant='outlined'
           className='text-field'
           type='text'
-          id='name'
-          name='name'
-          placeholder='Enter your name'
-          required
         />
+
         <div aria-live='polite'>
           <span className='hidden text-sm text-red-400'>
             please input your name
@@ -21,17 +20,14 @@ const Formregister = () => {
         </div>
       </div>
       <div className='mt-2'>
-        <label htmlFor='email' className='block mb-1 text-gray-500'>
-          Email <span className='text-red-500'>*</span>
-        </label>
-        <input
+        <TextField
+          id='outlined-basic'
+          label='Email'
+          variant='outlined'
           className='text-field'
           type='email'
-          id='email'
-          name='email'
-          placeholder='Enter your email'
-          required
         />
+
         <div aria-live='polite'>
           <span className='hidden text-sm text-red-400'>
             please input your email
@@ -39,17 +35,14 @@ const Formregister = () => {
         </div>
       </div>
       <div className='mt-2'>
-        <label htmlFor='password' className='block mb-1 text-gray-500'>
-          Password <span className='text-red-500'>*</span>
-        </label>
-        <input
+        <TextField
+          id='outlined-basic'
+          label='Password'
+          variant='outlined'
           className='text-field'
-          type='text'
-          id='password'
-          name='password'
-          placeholder='Create a strong password'
-          required
+          type='password'
         />
+
         <div aria-live='polite'>
           <span className='hidden text-sm text-red-400'>
             please input your password
@@ -57,16 +50,12 @@ const Formregister = () => {
         </div>
       </div>
       <div className='mt-2'>
-        <label htmlFor='confirm-password' className='block mb-1 text-gray-500'>
-          confirm Password <span className='text-red-500'>*</span>
-        </label>
-        <input
+        <TextField
+          id='outlined-basic'
+          label='Confirm Password'
+          variant='outlined'
           className='text-field'
-          type='text'
-          id='confirm-password'
-          name='confirm-password'
-          placeholder='Confirm your password'
-          required
+          type='password'
         />
         <div aria-live='polite'>
           <span className='hidden text-sm text-red-400'>
@@ -74,19 +63,16 @@ const Formregister = () => {
           </span>
         </div>
       </div>
-      <div className='mt-2'>
-        <label htmlFor='role' className='block mb-1 text-gray-500'>
-          Role <span className='text-red-500'>*</span>
-        </label>
-        <select
-          className='text-field bg-gray-50'
-          id='role'
-          name='role'
-          defaultValue='user'
-        >
-          <option value='user'>User</option>
-          <option value='admin'>Admin</option>
-        </select>
+
+      <div className='mt-5'>
+        <FormControl fullWidth className="bg-white">
+          <InputLabel id='role'>Pilih Role</InputLabel>
+          <Select labelId='demople-select-label'>
+            <MenuItem value='user'>User</MenuItem>
+            <MenuItem value='admin'>Admin</MenuItem>
+            
+          </Select>
+        </FormControl>
       </div>
       <div className='mt-5'>
         <button

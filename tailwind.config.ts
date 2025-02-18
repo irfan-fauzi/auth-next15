@@ -13,6 +13,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "register-img": "url('/register-img.webp')",
+      },
     },
   },
   plugins: [],

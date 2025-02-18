@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 .text-field {
-  @apply w-full px-4 py-2 border  rounded-md focus:outline-none shadow-sm focus:border-blue-500 text-gray-500 font-semibold placeholder:text-gray-300
-  placeholder:font-normal;
+  @apply w-full px-4 py-2 border  rounded-md focus:outline-none shadow-sm focus:outline-1 text-gray-500 bg-white;
   ;
 }

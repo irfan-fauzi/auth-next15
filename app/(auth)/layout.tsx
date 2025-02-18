@@ -1,12 +1,14 @@
 const AuthLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <main className='bg-gray-100 h-screen'>
-      <div className='flex flex-col items-center justify-center h-full mx-auto px-6 py-8'>
-        <div className='flex border border-gray-200 bg-white rounded-lg shadow-lg w-full max-w-screen-sm lg:max-w-[800px]'>
-          {children}
-        </div>
-      </div>
-    </main>
+    <>
+      <main className='2xl:h-screen xl:flex '>{children}</main>
+      <footer className="bg-gray-900 h-[200px] mt-5 flex justify-center items-center lg:justify-start">
+        <div className="max-w-[200px] lg:max-w-[400px] text-gray-100 text-center lg:text-left lg:px-10">
+          <p>Genius is the world’s biggest collection of song lyrics and musical knowledge</p>
+          <p className="text-xs mt-5">© Copirygt by irfan.fauzi</p>
+       </div>
+      </footer>
+    </>
   );
 };
 
