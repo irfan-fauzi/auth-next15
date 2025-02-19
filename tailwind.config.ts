@@ -15,6 +15,7 @@ export default {
       },
       backgroundImage: {
         "register-img": "url('/register-img.webp')",
+        "login-img": "url('/login.webp')",
       },
     },
   },

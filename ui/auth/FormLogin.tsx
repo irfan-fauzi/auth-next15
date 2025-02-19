@@ -1,5 +1,11 @@
-import { TextField } from "@mui/material";
+import {
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  TextField,
+} from "@mui/material";
 import AriaLive from "./AriaLive";
+import Link from "next/link";
 
 const FormLogin = () => {
   return (
@@ -15,7 +21,7 @@ const FormLogin = () => {
 
         <AriaLive>please input your email</AriaLive>
       </div>
-      <div className='mt-5'>
+      <div className='2xl:mt-8 mt-5'>
         <TextField
           id='outlined-basic'
           label='Password'
@@ -25,6 +31,14 @@ const FormLogin = () => {
         />
 
         <AriaLive>please input your password</AriaLive>
+      </div>
+      <div className='mt-5 flex items-center justify-between'>
+        <FormGroup>
+          <FormControlLabel control={<Checkbox />} label='remember me' />
+        </FormGroup>
+        <Link href='/login/forgot-password'>
+          <p className="text-red-500">forgot password</p>
+        </Link>
       </div>
 
       <div className='mt-5'>
