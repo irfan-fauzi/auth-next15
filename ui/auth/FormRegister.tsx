@@ -1,5 +1,6 @@
 import TextField from "@mui/material/TextField";
 import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
+import AriaLive from "./AriaLive";
 
 const Formregister = () => {
   return (
@@ -12,12 +13,7 @@ const Formregister = () => {
           className='text-field'
           type='text'
         />
-
-        <div aria-live='polite'>
-          <span className='hidden text-sm text-red-400'>
-            please input your name
-          </span>
-        </div>
+        <AriaLive>please input your name</AriaLive>
       </div>
       <div className='mt-2'>
         <TextField
@@ -28,11 +24,7 @@ const Formregister = () => {
           type='email'
         />
 
-        <div aria-live='polite'>
-          <span className='hidden text-sm text-red-400'>
-            please input your email
-          </span>
-        </div>
+       <AriaLive>please input your email</AriaLive>
       </div>
       <div className='mt-2'>
         <TextField
@@ -43,11 +35,7 @@ const Formregister = () => {
           type='password'
         />
 
-        <div aria-live='polite'>
-          <span className='hidden text-sm text-red-400'>
-            please input your password
-          </span>
-        </div>
+       <AriaLive>please input your password</AriaLive>
       </div>
       <div className='mt-2'>
         <TextField
@@ -57,11 +45,7 @@ const Formregister = () => {
           className='text-field'
           type='password'
         />
-        <div aria-live='polite'>
-          <span className='hidden text-sm text-red-400'>
-            please input your password
-          </span>
-        </div>
+       <AriaLive>please input your password</AriaLive>
       </div>
 
       <div className='mt-5'>
@@ -70,14 +54,14 @@ const Formregister = () => {
           <Select labelId='demople-select-label'>
             <MenuItem value='user'>User</MenuItem>
             <MenuItem value='admin'>Admin</MenuItem>
-            
           </Select>
         </FormControl>
+        <AriaLive>please input your Role</AriaLive>
       </div>
       <div className='mt-5'>
         <button
           type='submit'
-          className='border w-full bg-gray-800 py-4 text-gray-50 text-md font-semibold rounded-lg hover:bg-black'
+          className='border w-full bg-green-600 py-4 text-gray-50 text-md font-semibold rounded-lg hover:bg-green-700'
         >
           Sign Up
         </button>

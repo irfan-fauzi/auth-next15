@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookSquare } from "react-icons/fa";
-import Formregister from "@/ui/auth/form-register";
+import Formregister from "@/ui/auth/FormRegister";
+import Buton from "@/ui/auth/Buton";
+import Border from "@/ui/auth/Border";
+import ButonContainer from "@/ui/auth/ButonContainer";
 
 const RegisterPage = () => {
   return (
@@ -12,33 +15,29 @@ const RegisterPage = () => {
           <Image src='/logo.png' width={170} height={100} alt='logo' />
         </div>
       </section>
-      <section className='flex-grow '>
+      <section className='flex-grow'>
         <div className='flex justify-end mt-5 mr-5'>
           <Link href='/login'>
             have an account ? <span className='text-green-600'>Sign in</span>
           </Link>
         </div>
         <div className='flex justify-center mt-10 mb-10'>
-          <div className='border  text-gray-700 w-full max-w-[28rem] px-3'>
-            <h1 className='text-center text-xl font-bold'>
+          <div className='text-gray-700 w-full max-w-[28rem] px-3'>
+            <h1 className='text-center text-2xl font-bold'>
               Get Started with MAKER
             </h1>
             <p className='text-center text-sm mt-2'>getting started is easy</p>
-            <div className='flex justify-center mt-5 gap-2'>
-              <button className='border border-red-300 flex items-center justify-center gap-2 px-5 py-3 rounded-md'>
+            <ButonContainer>
+              <Buton>
                 <FcGoogle />
                 <span>Google</span>
-              </button>
-              <button className='border border-red-300  flex items-center justify-center gap-1 px-5 py-3 rounded-md'>
+              </Buton>
+              <Buton>
                 <FaFacebookSquare />
-                <span>facebook</span>
-              </button>
-            </div>
-            <div className='flex justify-between gap-5 items-center mt-4'>
-              <span className='bg-gray-400 w-full h-[1px] flex-1'></span>
-              <span className='text-xs flex-2'>or continue with</span>
-              <span className='bg-gray-400 w-full h-[1px] flex-1'></span>
-            </div>
+                <span>Facebook</span>
+              </Buton>
+            </ButonContainer>
+            <Border />
             <Formregister />
           </div>
         </div>
