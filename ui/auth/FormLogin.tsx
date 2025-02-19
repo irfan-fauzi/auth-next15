@@ -36,7 +36,7 @@ const FormLogin = () => {
         <FormGroup>
           <FormControlLabel control={<Checkbox />} label='remember me' />
         </FormGroup>
-        <Link href='/login/forgot-password'>
+        <Link href='/login/forgot-password' className="hidden">
           <p className="text-red-500">forgot password</p>
         </Link>
       </div>

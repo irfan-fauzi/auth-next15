@@ -5,3 +5,15 @@
 .text-field {
   @apply w-full px-4 py-2 focus:outline-none shadow-sm focus:outline-1 text-gray-500 bg-white;
 }
+
+.container-glass {
+  @apply  h-[200px] w-[450px] absolute z-10 bottom-7 left-7
+}
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  border-radius: 20px;
+  
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}

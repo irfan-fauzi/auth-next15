@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -6,15 +6,17 @@ import Formregister from "@/ui/auth/FormRegister";
 import Buton from "@/ui/auth/Buton";
 import Border from "@/ui/auth/Border";
 import ButonContainer from "@/ui/auth/ButonContainer";
+import ResponsiveImage from "@/ui/auth/ResponsiveImage";
 
 const RegisterPage = () => {
   return (
     <main className='flex flex-row max-w-screen-xl w-full m-auto  bg-[#F0F2F5] '>
-      <section className='bg-register-img bg-cover bg-center w-2/5 hidden lg:block'>
+      {/* <section className='bg-register-img bg-cover bg-center w-2/5 hidden lg:block'>
         <div className='mt-5 ml-5'>
           <Image src='/logo.png' width={170} height={100} alt='logo' />
         </div>
-      </section>
+      </section> */}
+      <ResponsiveImage src='/register-img.webp' />
       <section className='flex-grow'>
         <div className='flex justify-end mt-5 mr-5'>
           <Link href='/login'>
