@@ -1,10 +1,10 @@
 "use client";
 
 import TextField from "@mui/material/TextField";
-import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 import { registerCredentials } from "@/lib/actions";
 import { useFormState } from "react-dom";
 import AriaLive from "./AriaLive";
+
 
 const Formregister = () => {
   const initialState = {
@@ -19,6 +19,7 @@ const Formregister = () => {
   };
 
   const [state, action] = useFormState(registerCredentials, initialState);
+  console.log(state.error)
   return (
     <form action={action}>
       <div className=''>
@@ -72,26 +73,22 @@ const Formregister = () => {
           type='password'
           name='confirmPassword'
         />
-        {state?.error?.email &&
-          state.error.email.map((error: string) => (
+        {state?.error?.confirmPassword &&
+          state.error.confirmPassword.map((error: string) => (
             <AriaLive key={error}>{error}</AriaLive>
           ))}
       </div>
 
-      <div className='mt-5'>
+      {/* <div className='mt-5'>
         <FormControl fullWidth className='bg-white'>
           <InputLabel id='role'>Pilih Role</InputLabel>
-          <Select labelId='demople-select-label'>
+          <Select labelId='demople-select-label' name="">
             <MenuItem value='user'>User</MenuItem>
             <MenuItem value='admin'>Admin</MenuItem>
           </Select>
         </FormControl>
-        {state?.error?.role &&
-          state.error.role.map((error: string) => (
-            <AriaLive key={error}>{error}</AriaLive>
-          ))}
-        {/* <AriaLive>please input your Role</AriaLive> */}
-      </div>
+      </div> */}
+
       <div className='mt-5'>
         <button
           type='submit'

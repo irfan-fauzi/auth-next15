@@ -4,16 +4,16 @@ import { registerSchema } from "@/lib/zod";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 
-
-
 export const registerCredentials = async (
   prevState: unknown,
   formData: FormData
 ) => {
-  
-  const validatedFields = registerSchema.safeParse(
-    Object.fromEntries(formData.entries())
-  );
+  const validatedFields = registerSchema.safeParse({
+    name: formData.get("name"),
+    email: formData.get("email"),
+    password: formData.get("password"),
+    confirmPassword: formData.get("confirmPassword"),
+  });
 
   if (!validatedFields.success) {
     return {
@@ -30,11 +30,9 @@ export const registerCredentials = async (
         password: hashedPassword,
       },
     });
-
-  } catch(error) {
-    throw new Error(`failed to register: ${error}`)
+  } catch (error) {
+    throw new Error(`failed to register: ${error}`);
   }
- 
+
   redirect("/login");
-  
 };
