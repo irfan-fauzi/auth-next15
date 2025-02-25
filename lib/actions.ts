@@ -13,6 +13,7 @@ export const registerCredentials = async (
     email: formData.get("email"),
     password: formData.get("password"),
     confirmPassword: formData.get("confirmPassword"),
+    roles: formData.get("role"),
   });
 
   if (!validatedFields.success) {
@@ -20,13 +21,14 @@ export const registerCredentials = async (
       error: validatedFields.error.flatten().fieldErrors,
     };
   }
-  const { name, email, password } = validatedFields.data;
+  const { name, email, password, roles } = validatedFields.data;
   const hashedPassword = hashSync(password, 10);
   try {
     await prisma.user.create({
       data: {
         name,
         email,
+        roles,
         password: hashedPassword,
       },
     });
