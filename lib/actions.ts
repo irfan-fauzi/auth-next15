@@ -13,12 +13,26 @@ export const registerCredentials = async (
     email: formData.get("email"),
     password: formData.get("password"),
     confirmPassword: formData.get("confirmPassword"),
-    roles: formData.get("role"),
+    roles: formData.get("roles"),
   });
 
   if (!validatedFields.success) {
+    const fieldErrors = validatedFields.error.flatten().fieldErrors;
     return {
-      error: validatedFields.error.flatten().fieldErrors,
+      values: {
+        name: formData.get("name") || "",
+        email: formData.get("email") || "",
+        password: formData.get("password") || "",
+        confirmPassword: formData.get("confirmPassword") || "",
+        roles: formData.get("role") || "",
+      },
+      error: {
+        name: fieldErrors.name || [],
+        email: fieldErrors.email || [],
+        password: fieldErrors.password || [],
+        confirmPassword: fieldErrors.confirmPassword || [],
+        roles: fieldErrors.roles || [],
+      },
     };
   }
   const { name, email, password, roles } = validatedFields.data;
@@ -28,7 +42,20 @@ export const registerCredentials = async (
   });
   if (existingUser) {
     return {
-      error: { email: ["email is already used"] },
+      values: {
+        name: formData.get("name") || "",
+        email: formData.get("email") || "",
+        password: formData.get("password") || "",
+        confirmPassword: formData.get("confirmPassword") || "",
+        roles: formData.get("role") || "",
+      },
+      error: {
+        name: [],
+        email: ["email is already used"],
+        password: [],
+        confirmPassword: [],
+        roles: [],
+      },
     };
   }
   //---------------------------

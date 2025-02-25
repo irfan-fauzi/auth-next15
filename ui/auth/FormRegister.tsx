@@ -10,6 +10,13 @@ import { useActionState } from "react";
 
 const Formregister = () => {
   const initialState = {
+    values: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      roles: "",
+    },
     error: {
       name: [],
       email: [],
@@ -32,6 +39,7 @@ const Formregister = () => {
           className='text-field'
           type='text'
           name='name'
+          defaultValue={state?.values?.name}
         />
         {state?.error?.name &&
           state.error.name.map((error: string) => (
@@ -46,6 +54,7 @@ const Formregister = () => {
           className='text-field'
           type='email'
           name='email'
+          defaultValue={state?.values?.email}
         />
         {state?.error?.email &&
           state.error.email.map((error: string) => (
@@ -60,6 +69,7 @@ const Formregister = () => {
           className='text-field'
           type='password'
           name='password'
+          defaultValue={state?.values?.password}
         />
         {state?.error?.password &&
           state.error.password.map((error: string) => (
@@ -74,6 +84,7 @@ const Formregister = () => {
           className='text-field'
           type='password'
           name='confirmPassword'
+          defaultValue={state?.values?.confirmPassword}
         />
         {state?.error?.confirmPassword &&
           state.error.confirmPassword.map((error: string) => (
@@ -83,8 +94,8 @@ const Formregister = () => {
 
       <div className='mt-5'>
         <FormControl fullWidth className='bg-white'>
-          <InputLabel id='role'>Pilih Role</InputLabel>
-          <Select labelId='demople-select-label' name='role'>
+          <InputLabel id='roles'>Pilih Role</InputLabel>
+          <Select labelId='demople-select-label' name='roles'>
             <MenuItem value='user'>User</MenuItem>
             <MenuItem value='admin'>Admin</MenuItem>
           </Select>
