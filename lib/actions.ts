@@ -28,9 +28,10 @@ export const registerCredentials = async (
   });
   if (existingUser) {
     return {
-      error: { email: ["email sudah pernah digunakan"] },
+      error: { email: ["email is already used"] },
     };
   }
+  //---------------------------
   const hashedPassword = hashSync(password, 10);
   try {
     await prisma.user.create({
