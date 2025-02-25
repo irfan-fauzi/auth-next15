@@ -22,6 +22,15 @@ export const registerCredentials = async (
     };
   }
   const { name, email, password, roles } = validatedFields.data;
+  // is email already used
+  const existingUser = await prisma.user.findUnique({
+    where: { email },
+  });
+  if (existingUser) {
+    return {
+      error: { email: ["email sudah pernah digunakan"] },
+    };
+  }
   const hashedPassword = hashSync(password, 10);
   try {
     await prisma.user.create({
