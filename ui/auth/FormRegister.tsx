@@ -2,7 +2,6 @@
 
 import TextField from "@mui/material/TextField";
 import { registerCredentials } from "@/lib/actions";
-
 import AriaLive from "./AriaLive";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import SubmitButton from "./SubmitButton";
