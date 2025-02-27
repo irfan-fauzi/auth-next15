@@ -22,7 +22,7 @@ const RegisterPage = () => {
         />
         <div className='absolute top-4 left-8'>
           <Link href='/'>
-            <Image src='/logo.png' width={150} height={50} alt='logo' />
+            <Image src='/logo2.png' width={150} height={50} alt='logo' />
           </Link>
           <FeaturedRegister />
         </div>

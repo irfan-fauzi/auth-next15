@@ -7,13 +7,28 @@
 }
 
 .container-glass {
-  @apply  h-[200px] w-[450px] absolute z-10 bottom-7 left-7
+  @apply h-[200px] w-[450px] absolute z-10 bottom-7 left-7;
 }
 .glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
   border-radius: 20px;
-  
+
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
+/* menu navigasi landing page */
+
+.nav-landing {
+  @apply w-[120px] py-1 text-center rounded-full;
+}
+.nav-active {
+  @apply bg-white
+}
+
+/* --- end menu navigasi landing page */

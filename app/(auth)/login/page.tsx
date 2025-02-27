@@ -13,7 +13,7 @@ const LoginPage = () => {
   return (
     <main className='flex flex-row max-w-screen-xl w-full m-auto  bg-[#F0F2F5] h-[750px]'>
       <section className='flex-grow'>
-        <div className='flex justify-between px-5 py-2 mt-5'>
+        <div className='flex justify-between px-5 py-2'>
           <Image src='/logo2.png' width={120} height={100} alt='logo' />
           <Link href='/register' className='flex items-center gap-2'>
             <span className='text-sm'>Dont have an account ?</span>
