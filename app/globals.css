@@ -28,7 +28,19 @@
   @apply w-[120px] py-1 text-center rounded-full;
 }
 .nav-active {
-  @apply bg-white
+  @apply bg-white;
 }
-
+.nav-container {
+  @apply flex justify-between items-center max-w-screen-xl mx-auto border mt-[2rem] px-5;
+}
+.menu-container {
+  @apply flex items-center gap-5 px-1 py-1 rounded-full font-medium text-lg bg-gray-100 text-gray-800;
+}
+.btn-trial {
+  @apply bg-blue-800 text-gray-50 lg:px-10 px-9 lg:py-3 py-3 rounded-full lg:text-lg lg:font-medium shadow-lg hover:bg-blue-600 transition-colors;
+}
 /* --- end menu navigasi landing page */
+
+.client-hover {
+  @apply fill-blue-700;
+}
