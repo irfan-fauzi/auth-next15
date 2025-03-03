@@ -31,7 +31,7 @@
   @apply bg-white;
 }
 .nav-container {
-  @apply flex justify-between items-center max-w-screen-xl mx-auto border mt-[2rem] px-5;
+  @apply flex justify-between items-center max-w-screen-xl mx-auto  mt-[2rem] px-5;
 }
 .menu-container {
   @apply flex items-center gap-5 px-1 py-1 rounded-full font-medium text-lg bg-gray-100 text-gray-800;
