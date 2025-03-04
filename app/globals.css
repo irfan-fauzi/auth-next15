@@ -44,3 +44,10 @@
 .client-hover {
   @apply fill-blue-700;
 }
+
+
+/* card feature */
+
+.card-feature {
+  @apply bg-white shadow-xl rounded-xl
+}
