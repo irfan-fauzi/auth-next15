@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Why = () => {
   return (
-    <section className='bg-white max-w-[1250px] shadow-lg flex gap-10 mx-auto py-12 pl-12 rounded-3xl mt-20 items-center'>
+    <section className='bg-white max-w-[1250px] shadow-lg flex gap-10 mx-auto py-10 pl-12 rounded-3xl mt-20 items-center'>
       <div className='bg-blue-950 rounded-2xl py-5 px-10'>
         <Image
           src='/app.webp'
