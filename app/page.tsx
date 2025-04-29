@@ -4,6 +4,7 @@ import Layout from "@/ui/components/landing/Layout";
 import Features from "@/ui/components/landing/Sections/Features";
 import Gradient from "@/ui/components/landing/Gradient";
 import Why from "@/ui/components/landing/Sections/Why";
+import PriceCard from "@/ui/components/landing/price-card";
 
 const Home = () => {
   return (
@@ -18,47 +19,17 @@ const Home = () => {
           className='absolute top-28 right-0 inline-block'
         />
         <Why />
-        <section className='max-w-screen-xl mx-auto border border-black'>
+        <section className='max-w-screen-xl mx-auto mt-10 pb-10 px-5'>
           <h2 className='text-3xl text-center'>
             Ready to Improve efficiency with us ?
           </h2>
           <p className='text-center'>
             choose a plan that suite your business needs
           </p>
-          <div className='flex'>
-            <div className='border border-red-400'>
-              <h3 className='text-xl text-blue-600'>Basic</h3>
-              <p className='text-lg'>Perfect plan to get started</p>
-              <p className='text-4xl font-semibold flex items-center gap-1'>
-                IDR 129.000{" "}
-                <span className='text-gray-500 text-sm font-normal'>
-                  /mounth
-                </span>
-              </p>
-              <p>Features you get by buying basic</p>
-              <ul>
-                <li>Basic POS features</li>
-                <li>🧮 Digital Cashier Application</li>
-                <li>🧮 Integration with popular tools</li>
-              </ul>
-              <ul>
-                <li>Payment Receipt</li>
-                <li>🧮 Digital Payment Through QRIS</li>
-              </ul>
-              <ul>
-                <li>Payment Receipt</li>
-                <li>🧮 Dashboard Laporan Realtime</li>
-                <li>🧮 Raw Material Management</li>
-                <li>🧮 Prescriptian Management</li>
-                <li>🧮 Cost of God Sold</li>
-              </ul>
-              <ul>
-                <li>Other Support</li>
-                <li>🧮 Online Education & Training</li>
-                <li>🧮 Call Center Support</li>
-                <li>🧮 Whatsapp Support</li>
-              </ul>
-            </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mt-10 border border-black items-center justify-items-center'>
+            <PriceCard />
+            <PriceCard />
+            <PriceCard />
           </div>
         </section>
       </Layout>
