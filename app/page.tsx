@@ -4,7 +4,8 @@ import Layout from "@/ui/components/landing/Layout";
 import Features from "@/ui/components/landing/Sections/Features";
 import Gradient from "@/ui/components/landing/Gradient";
 import Why from "@/ui/components/landing/Sections/Why";
-import PriceCard from "@/ui/components/landing/price-card";
+import PriceCard from "@/ui/components/landing/price-card/Basic";
+import Premium from "@/ui/components/landing/price-card/Premium";
 
 const Home = () => {
   return (
@@ -26,9 +27,9 @@ const Home = () => {
           <p className='text-center'>
             choose a plan that suite your business needs
           </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mt-10 border border-black items-center justify-items-center'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mt-10 items-center justify-items-center'>
             <PriceCard />
-            <PriceCard />
+            <Premium />
             <PriceCard />
           </div>
         </section>
