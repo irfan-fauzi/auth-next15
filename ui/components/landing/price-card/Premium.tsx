@@ -8,7 +8,7 @@ const Premium = () => {
       <h3 className='text-2xl font-semibold text-blue-600'>Premium</h3>
       <p className='text-md'>Perfect plan to get started</p>
       <p className='text-3xl font-semibold flex items-center gap-1 mt-3'>
-        IDR 129.000{" "}
+        IDR 159.000{" "}
         <span className='text-gray-500 text-sm font-normal'>/mounth</span>
       </p>
       <p className='mt-3'>Features you get by buying basic</p>

@@ -6,6 +6,8 @@ import Gradient from "@/ui/components/landing/Gradient";
 import Why from "@/ui/components/landing/Sections/Why";
 import PriceCard from "@/ui/components/landing/price-card/Basic";
 import Premium from "@/ui/components/landing/price-card/Premium";
+import Pro from "@/ui/components/landing/price-card/Pro";
+import Footer from "@/ui/components/landing/Sections/Footer";
 
 const Home = () => {
   return (
@@ -30,10 +32,12 @@ const Home = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mt-10 items-center justify-items-center'>
             <PriceCard />
             <Premium />
-            <PriceCard />
+            <Pro />
           </div>
         </section>
       </Layout>
+      <Footer
+      />
     </>
   );
 };
